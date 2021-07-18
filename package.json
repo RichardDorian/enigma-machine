@@ -1,0 +1,22 @@
+{
+  "name": "enigma-machine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node tests/index.test.js",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [
+    "enigma",
+    "simulator"
+  ],
+  "author": "RichardDorian",
+  "license": "MIT"
+}
