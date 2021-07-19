@@ -1,8 +1,10 @@
 {
   "name": "enigma-machine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "types": "build/index.d.ts",
   "dependencies": {
     "chalk": "^4.1.1"
   },

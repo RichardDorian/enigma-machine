@@ -1,6 +1,16 @@
 # enigma-machine
 Enigma simulator in Typescript
 
+## Installation and Importation
+### Installation
+```bash
+$ npm install enigma-machine
+```
+### Importation
+```js
+const EnigmaMachine = require('enigma-machine');
+```
+
 ## Machine creation
 ### Creating a Rotor
 ```js
@@ -30,3 +40,15 @@ const mySecondMessage = enigma.calculateString('lumquxgpzf');
 // Return 'helloworld' with test config
 ```
 See [test file](https://github.com/RichardDorian/enigma-machine/blob/master/tests/index.test.js) on GitHub
+
+## Generating configurations
+### Generating a Rotor configuration
+```js
+const rotorConfiguration = EnigmaMachine.generateRotorConfiguration();
+```
+
+## Todo
+- Add a configuration generator for :
+  - Reflector
+  - Plugboard
+- Add a way to import full Enigma configuration
