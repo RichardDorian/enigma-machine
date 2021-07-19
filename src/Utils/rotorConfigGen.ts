@@ -1,8 +1,8 @@
-import { Letter, RotorConfiguration } from "../types";
-import { letterToNumber, numberToLetter } from "./letter";
+import { Letter, RotorConfiguration } from '../types';
+import { letterToNumber, numberToLetter } from './letter';
 
 export function generateRotorConfiguration(): RotorConfiguration {
-  let usedList: number[] = [];
+  const usedList: number[] = [];
   return {
     rotation: letterToNumber(generateUsedNumber(usedList, true)),
     connectionMap: {
@@ -31,25 +31,25 @@ export function generateRotorConfiguration(): RotorConfiguration {
       w: generateUsedNumber(usedList),
       x: generateUsedNumber(usedList),
       y: generateUsedNumber(usedList),
-      z: generateUsedNumber(usedList)
-    }
-  }
+      z: generateUsedNumber(usedList),
+    },
+  };
 }
 
 function generateUsedNumber(usedList: number[], ignoreList: boolean = false): Letter {
-  let generated: number = generateNumber(26);
-  if(ignoreList) {
+  const generated: number = generateNumber(26);
+  if (ignoreList) {
     return numberToLetter(generated);
   } else {
-    if(usedList.includes(generated)) {
+    if (usedList.includes(generated)) {
       return generateUsedNumber(usedList, ignoreList);
     } else {
-      usedList.push(generated);      
+      usedList.push(generated);
       return numberToLetter(generated);
     }
   }
 }
 
 function generateNumber(maximum: number): number {
-  return Math.floor(Math.random() * maximum+1);
+  return Math.floor(Math.random() * maximum + 1);
 }

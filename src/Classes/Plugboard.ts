@@ -1,5 +1,5 @@
 import * as Logger from '../logger';
-import { Letter, PlugboardConnectionMap } from "../types";
+import { Letter, PlugboardConnectionMap } from '../types';
 
 export class Plugboard {
   public name: string;

@@ -1,4 +1,4 @@
-import { Letter, ReflectorConnectionMap } from "../types";
+import { Letter, ReflectorConnectionMap } from '../types';
 
 export class Reflector {
   public name: string;

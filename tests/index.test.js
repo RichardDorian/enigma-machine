@@ -28,8 +28,8 @@ const myRotor = new EnigmaMachine.Rotor('1', {
     w: 'j',
     x: 'e',
     y: 'r',
-    z: 'm'
-  }
+    z: 'm',
+  },
 });
 const myRotor2 = new EnigmaMachine.Rotor('2', {
   rotation: 8,
@@ -59,8 +59,8 @@ const myRotor2 = new EnigmaMachine.Rotor('2', {
     w: 'x',
     x: 'm',
     y: 'i',
-    z: 'f'
-  }
+    z: 'f',
+  },
 });
 const myRotor3 = new EnigmaMachine.Rotor('3', {
   rotation: 26,
@@ -90,13 +90,67 @@ const myRotor3 = new EnigmaMachine.Rotor('3', {
     w: 'j',
     x: 'u',
     y: 'i',
-    z: 'n'
-  }
+    z: 'n',
+  },
 });
 
-const myReflector = new EnigmaMachine.Reflector('MyReflector', { a: 'z',  b: 'y', c: 'x', d: 'w', e: 'v', f: 'u', g: 't', h: 's', i: 'r', j: 'q', k: 'p', l: 'o', m: 'n', n: 'm', o: 'l', p: 'k', q: 'j', r: 'i', s: 'h', t: 'g', u: 'f', v: 'e', w: 'd', x: 'c', y: 'b', z: 'a' });
-const myPlugboard = new EnigmaMachine.Plugboard('MyPlugboard', { a: 'b', b: 'a', c: 'd', d: 'c', e: 'f', f: 'e', g: 'h', h: 'g', i: 'j', j: 'i', k: 'l', l: 'k', m: 'n', n: 'm', o: 'p', p: 'o', q: 'r', r: 'q', s: 't', t: 's', u: 'v', v: 'u', w: 'x', x: 'w', y: 'z', z: 'y'});
+const myReflector = new EnigmaMachine.Reflector('MyReflector', {
+  a: 'z',
+  b: 'y',
+  c: 'x',
+  d: 'w',
+  e: 'v',
+  f: 'u',
+  g: 't',
+  h: 's',
+  i: 'r',
+  j: 'q',
+  k: 'p',
+  l: 'o',
+  m: 'n',
+  n: 'm',
+  o: 'l',
+  p: 'k',
+  q: 'j',
+  r: 'i',
+  s: 'h',
+  t: 'g',
+  u: 'f',
+  v: 'e',
+  w: 'd',
+  x: 'c',
+  y: 'b',
+  z: 'a',
+});
+const myPlugboard = new EnigmaMachine.Plugboard('MyPlugboard', {
+  a: 'b',
+  b: 'a',
+  c: 'd',
+  d: 'c',
+  e: 'f',
+  f: 'e',
+  g: 'h',
+  h: 'g',
+  i: 'j',
+  j: 'i',
+  k: 'l',
+  l: 'k',
+  m: 'n',
+  n: 'm',
+  o: 'p',
+  p: 'o',
+  q: 'r',
+  r: 'q',
+  s: 't',
+  t: 's',
+  u: 'v',
+  v: 'u',
+  w: 'x',
+  x: 'w',
+  y: 'z',
+  z: 'y',
+});
 
 const myEnigma = new EnigmaMachine.Enigma('MyEnigmaMachine', [myRotor, myRotor2, myRotor3], myReflector, myPlugboard);
 
-myEnigma.calculateString('lumquucamstlcgvxmicutrznvodlrxmr');
+myEnigma.calculateString('immjk');

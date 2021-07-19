@@ -10,7 +10,7 @@ export class Enigma {
   private rotors: Rotor[];
   private reflector: Reflector;
   private plugboard: Plugboard;
-  
+
   public constructor(name: string, rotors: Rotor[], reflector: Reflector, plugboard: Plugboard) {
     this.name = name;
     this.rotors = rotors;
@@ -33,25 +33,24 @@ export class Enigma {
     currentLetter = this.rotors[1].invertedRotorConnectionMap[currentLetter];
     currentLetter = this.rotors[0].invertedRotorConnectionMap[currentLetter];
     currentLetter = this.plugboard.goThrough(currentLetter);
-    let rotor1rotation = this.rotors[0].rotate();
-    if(rotor1rotation) {
-      let rotor2rotation = this.rotors[1].rotate();
-      if(rotor2rotation) {
+    const rotor1rotation = this.rotors[0].rotate();
+    if (rotor1rotation) {
+      const rotor2rotation = this.rotors[1].rotate();
+      if (rotor2rotation) {
         this.rotors[2].rotate();
       }
     }
     return currentLetter;
   }
 
-  public calculateString(string: string): string {
-    Logger.calculateLog(`Calculating message "${string}"...`);
+  public calculateString(stringToCalculate: string): string {
+    Logger.calculateLog(`Calculating message "${stringToCalculate}"...`);
     let output: string = '';
-    for (let index = 0; index < string.length; index++) {
-      const currentLetter: Letter = string[index] as Letter;
+    for (let index = 0; index < stringToCalculate.length; index++) {
+      const currentLetter: Letter = stringToCalculate[index] as Letter;
       output = output + this.calculateLetter(currentLetter);
     }
-    Logger.calculateLog(`Calculated! Output of "${string}" : "${output}"`);
+    Logger.calculateLog(`Calculated! Output of "${stringToCalculate}" : "${output}"`);
     return output;
   }
-
 }
