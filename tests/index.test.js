@@ -153,4 +153,4 @@ const myPlugboard = new EnigmaMachine.Plugboard('MyPlugboard', {
 
 const myEnigma = new EnigmaMachine.Enigma('MyEnigmaMachine', [myRotor, myRotor2, myRotor3], myReflector, myPlugboard);
 
-myEnigma.calculateString('immjk');
+myEnigma.calculateString('helloworld');
