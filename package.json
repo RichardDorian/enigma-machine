@@ -1,6 +1,6 @@
 {
   "name": "enigma-machine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
@@ -26,5 +26,13 @@
     "simulator"
   ],
   "author": "RichardDorian",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/RichardDorian/enigma-machine#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardDorian/enigma-machine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RichardDorian/enigma-machine/issues"
+  }
 }
