@@ -24,7 +24,7 @@ const reflector = new EnigmaMachine.Reflector(/* ConnectionMap Object */);
 ```js
 const plugboard = new EnigmaMachine.Plugboard(/* ConnectionMap Object */);
 ```
-❓ [See how to generate a random ConnectionMap]
+❓ [See how to generate a random ConnectionMap](https://github.com/RichardDorian/enigma-machine#generating-a-connectionmap-used-to-configure-a-reflector-or-a-plugboard)
 ### Creating the Enigma Machine
 ```js
 const enigma = new EnigmaMachine.Enigma([rotor1, rotor2, rotor3], reflector, plugboard);
