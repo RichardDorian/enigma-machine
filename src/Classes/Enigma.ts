@@ -4,7 +4,6 @@ import { Reflector } from './Reflector';
 import { Rotor } from './Rotor';
 
 export class Enigma {
-
   private rotors: Rotor[];
   public reflector: Reflector;
   public plugboard: Plugboard;

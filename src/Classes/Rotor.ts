@@ -29,7 +29,7 @@ export class Rotor {
     } else return false;
   }
 
-  private invertConnectionMap(obj: object): ConnectionMap {    
+  private invertConnectionMap(obj: object): ConnectionMap {
     return Object.assign({}, ...Object.entries(obj).map(([a, b]) => ({ [b]: a }))) as ConnectionMap;
   }
 }

@@ -30,8 +30,8 @@ const enigmaConf = {
         w: 'l',
         x: 'w',
         y: 'p',
-        z: 'z'
-      }
+        z: 'z',
+      },
     },
     {
       rotation: 17,
@@ -61,8 +61,8 @@ const enigmaConf = {
         w: 'k',
         x: 'q',
         y: 'i',
-        z: 'x'
-      }
+        z: 'x',
+      },
     },
     {
       rotation: 19,
@@ -92,9 +92,9 @@ const enigmaConf = {
         w: 'p',
         x: 'k',
         y: 'v',
-        z: 'w'
-      }
-    }
+        z: 'w',
+      },
+    },
   ],
   reflector: {
     a: 'u',
@@ -122,7 +122,7 @@ const enigmaConf = {
     w: 'y',
     x: 'k',
     y: 'w',
-    z: 'c'
+    z: 'c',
   },
   plugboard: {
     a: 'i',
@@ -150,9 +150,9 @@ const enigmaConf = {
     w: 'c',
     x: 'g',
     y: 'o',
-    z: 'm'
-  }
-}
+    z: 'm',
+  },
+};
 const dumbJs = {
   rotors: [
     {
@@ -183,8 +183,8 @@ const dumbJs = {
         w: 'l',
         x: 'w',
         y: 'p',
-        z: 'z'
-      }
+        z: 'z',
+      },
     },
     {
       rotation: 17,
@@ -214,8 +214,8 @@ const dumbJs = {
         w: 'k',
         x: 'q',
         y: 'i',
-        z: 'x'
-      }
+        z: 'x',
+      },
     },
     {
       rotation: 19,
@@ -245,9 +245,9 @@ const dumbJs = {
         w: 'p',
         x: 'k',
         y: 'v',
-        z: 'w'
-      }
-    }
+        z: 'w',
+      },
+    },
   ],
   reflector: {
     a: 'u',
@@ -275,7 +275,7 @@ const dumbJs = {
     w: 'y',
     x: 'k',
     y: 'w',
-    z: 'c'
+    z: 'c',
   },
   plugboard: {
     a: 'i',
@@ -303,9 +303,9 @@ const dumbJs = {
     w: 'c',
     x: 'g',
     y: 'o',
-    z: 'm'
-  }
-}
+    z: 'm',
+  },
+};
 const enigma1 = EnigmaMachine.Enigma.generateFromEnigmaConfig(enigmaConf);
 const enigma2 = EnigmaMachine.Enigma.generateFromEnigmaConfig(dumbJs);
 
