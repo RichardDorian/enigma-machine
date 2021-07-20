@@ -1,3 +1,5 @@
+import { Rotor } from './Classes/Rotor';
+
 export type Letter =
   | 'a'
   | 'b'
@@ -29,10 +31,12 @@ export type Letter =
 
 export interface RotorConfiguration {
   rotation: number;
-  connectionMap: RotorConnectionMap;
+  connectionMap: ConnectionMap;
 }
 
-export interface RotorConnectionMap {
+export type RotorList = [Rotor, Rotor, Rotor];
+
+export interface ConnectionMap {
   a: Letter;
   b: Letter;
   c: Letter;
@@ -61,60 +65,8 @@ export interface RotorConnectionMap {
   z: Letter;
 }
 
-export interface ReflectorConnectionMap {
-  a: Letter;
-  b: Letter;
-  c: Letter;
-  d: Letter;
-  e: Letter;
-  f: Letter;
-  g: Letter;
-  h: Letter;
-  i: Letter;
-  j: Letter;
-  k: Letter;
-  l: Letter;
-  m: Letter;
-  n: Letter;
-  o: Letter;
-  p: Letter;
-  q: Letter;
-  r: Letter;
-  s: Letter;
-  t: Letter;
-  u: Letter;
-  v: Letter;
-  w: Letter;
-  x: Letter;
-  y: Letter;
-  z: Letter;
-}
-
-export interface PlugboardConnectionMap {
-  a: Letter;
-  b: Letter;
-  c: Letter;
-  d: Letter;
-  e: Letter;
-  f: Letter;
-  g: Letter;
-  h: Letter;
-  i: Letter;
-  j: Letter;
-  k: Letter;
-  l: Letter;
-  m: Letter;
-  n: Letter;
-  o: Letter;
-  p: Letter;
-  q: Letter;
-  r: Letter;
-  s: Letter;
-  t: Letter;
-  u: Letter;
-  v: Letter;
-  w: Letter;
-  x: Letter;
-  y: Letter;
-  z: Letter;
+export interface EnigmaConfiguration {
+  rotors: [RotorConfiguration, RotorConfiguration, RotorConfiguration];
+  reflector: ConnectionMap;
+  plugboard: ConnectionMap;
 }

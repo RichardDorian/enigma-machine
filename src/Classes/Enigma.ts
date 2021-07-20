@@ -1,18 +1,15 @@
-import * as Logger from '../logger';
-import { Letter } from '../types';
+import { EnigmaConfiguration, Letter, RotorList } from '../types';
 import { Plugboard } from './Plugboard';
 import { Reflector } from './Reflector';
 import { Rotor } from './Rotor';
 
 export class Enigma {
-  public name: string;
 
   private rotors: Rotor[];
-  private reflector: Reflector;
-  private plugboard: Plugboard;
+  public reflector: Reflector;
+  public plugboard: Plugboard;
 
-  public constructor(name: string, rotors: Rotor[], reflector: Reflector, plugboard: Plugboard) {
-    this.name = name;
+  public constructor(rotors: RotorList, reflector: Reflector, plugboard: Plugboard) {
     this.rotors = rotors;
     this.reflector = reflector;
     this.plugboard = plugboard;
@@ -44,13 +41,19 @@ export class Enigma {
   }
 
   public calculateString(stringToCalculate: string): string {
-    Logger.calculateLog(`Calculating message "${stringToCalculate}"...`);
     let output: string = '';
     for (let index = 0; index < stringToCalculate.length; index++) {
       const currentLetter: Letter = stringToCalculate[index] as Letter;
       output = output + this.calculateLetter(currentLetter);
     }
-    Logger.calculateLog(`Calculated! Output of "${stringToCalculate}" : "${output}"`);
     return output;
+  }
+
+  public static generateFromEnigmaConfig(config: EnigmaConfiguration): Enigma {
+    return new Enigma(
+      [new Rotor(config.rotors[0]), new Rotor(config.rotors[1]), new Rotor(config.rotors[2])],
+      new Reflector(config.reflector),
+      new Plugboard(config.plugboard),
+    );
   }
 }

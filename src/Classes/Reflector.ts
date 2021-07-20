@@ -1,12 +1,9 @@
-import { Letter, ReflectorConnectionMap } from '../types';
+import { Letter, ConnectionMap } from '../types';
 
 export class Reflector {
-  public name: string;
+  private connectionMap: ConnectionMap;
 
-  private connectionMap: ReflectorConnectionMap;
-
-  public constructor(name: string, connectionMap: ReflectorConnectionMap) {
-    this.name = name;
+  public constructor(connectionMap: ConnectionMap) {
     this.connectionMap = connectionMap;
   }
 

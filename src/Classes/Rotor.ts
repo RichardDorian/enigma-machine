@@ -1,16 +1,12 @@
-import * as Logger from '../logger';
-import { Letter, RotorConfiguration, RotorConnectionMap } from '../types';
+import { Letter, RotorConfiguration, ConnectionMap } from '../types';
 import { letterToNumber, numberToLetter } from '../Utils/letter';
 
 export class Rotor {
-  public name: string;
-
   public rotation: number;
-  public connectionMap: RotorConnectionMap;
-  public invertedRotorConnectionMap: RotorConnectionMap;
+  public connectionMap: ConnectionMap;
+  public invertedRotorConnectionMap: ConnectionMap;
 
-  public constructor(name: string, rotorConfiguration: RotorConfiguration) {
-    this.name = name;
+  public constructor(rotorConfiguration: RotorConfiguration) {
     this.connectionMap = rotorConfiguration.connectionMap;
     this.invertedRotorConnectionMap = this.invertConnectionMap(this.connectionMap);
     this.rotation = rotorConfiguration.rotation;
@@ -27,15 +23,13 @@ export class Rotor {
       });
     }
     this.invertedRotorConnectionMap = this.invertConnectionMap(this.connectionMap);
-    Logger.info(`Rotor ${this.name} rotated ${times} time(s)`);
     if (this.rotation > 26) {
       this.rotation += -26;
-      Logger.info(`Rotor ${this.name} made a full rotation`);
       return true;
     } else return false;
   }
 
-  private invertConnectionMap(obj: object): RotorConnectionMap {
-    return Object.assign({}, ...Object.entries(obj).map(([a, b]) => ({ [b]: a }))) as RotorConnectionMap;
+  private invertConnectionMap(obj: object): ConnectionMap {    
+    return Object.assign({}, ...Object.entries(obj).map(([a, b]) => ({ [b]: a }))) as ConnectionMap;
   }
 }
