@@ -12,7 +12,7 @@ $ npm install enigma-machine
 const EnigmaMachine = require('enigma-machine');
 
 // Browser
-<script src="https://unpkg.com/enigma-machine@1.1.0/build/browser.js"></script>
+<script src="https://unpkg.com/enigma-machine@1.1.1/build/browser.js"></script>
 ```
 
 ## Machine creation
