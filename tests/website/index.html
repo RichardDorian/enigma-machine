@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Enigma Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/enigma-machine@1.1.0/build/browser.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="app-container">
+      <h1>Welcome to <strong>Enigma</strong> simulator</h1>
+      <textarea id="enigma-config" placeholder="Paste your enigma config here" cols="35"></textarea>
+      <br>
+      <button id="generate-config" onclick="generateRandomConfig();">Generate random config</button>
+      <button id="apply-config" onclick="applyChanges();">Apply changes</button><br><br>
+      <button id="reset-enigma" onclick="reset()" class="big-button" style="background-color: rgb(255, 0, 0);">Reset Enigma</button>
+      <br><br><br>
+      <textarea id="to-encrypt" placeholder="Message to encrypt/decrypt" rows="15" cols="75"></textarea>
+      <br><br>
+      <button id="encrypt" style="background-color: rgb(253, 172, 21);" class="big-button" onclick="calculate()">Encrypt/Decrypt!</button>
+      <br><br>
+      <textarea id="encrypted" placeholder="Encrypted/Decrypted message" rows="15" cols="75"></textarea>
+      <div id="rotors">
+        <h2>Rotations</h2>
+        <div class="rotor-display">
+          <h2>Rotor 1 :</h2>
+          <h2 id="rotor0"></h2>
+        </div>
+        <div class="rotor-display">
+          <h2>Rotor 2 :</h2>
+          <h2 id="rotor1"></h2>
+        </div>
+        <div class="rotor-display">
+          <h2>Rotor 2 :</h2>
+          <h2 id="rotor2"></h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
