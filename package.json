@@ -1,6 +1,6 @@
 {
   "name": "enigma-machine",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Enigma simulator in Typescript",
   "main": "./build/index.js",
   "browser": "./build/browser.js",
