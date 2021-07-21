@@ -73,5 +73,6 @@ const enigmaConfig = EnigmaMachine.generateEnigmaConfiguration();
 :warning: **If you want to create two Enigma machines with the same configuration (for crypting and "decrypting" for example) you can't use the same object ! You have to create an another object with the same content. Why you would ask... the answer is very simple because Javascript is a piece of 💩** ***(btw I lost 4 hours because of this*** 😡 ***)***
 
 ## Todo
+- Fix browser version
 - Improve the browser version of the lib (because I'm bundling it manually) 🖥️
 - ~~Nothing (I hope) 😀~~
