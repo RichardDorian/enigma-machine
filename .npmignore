@@ -5,3 +5,4 @@ tests
 .gitignore
 .prettierrc
 .tslint.js
+docs
