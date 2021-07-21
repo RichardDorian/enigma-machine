@@ -12,7 +12,7 @@ $ npm install enigma-machine
 const EnigmaMachine = require('enigma-machine');
 
 // Browser
-<script src="https://unpkg.com/enigma-machine@1.1.1/build/browser.js"></script>
+<script src="https://unpkg.com/enigma-machine@1.1.3/build/browser.js"></script>
 ```
 
 ## Machine creation
@@ -73,6 +73,5 @@ const enigmaConfig = EnigmaMachine.generateEnigmaConfiguration();
 :warning: **If you want to create two Enigma machines with the same configuration (for crypting and "decrypting" for example) you can't use the same object ! You have to create an another object with the same content. Why you would ask... the answer is very simple because Javascript is a piece of 💩** ***(btw I lost 4 hours because of this*** 😡 ***)***
 
 ## Todo
-- Fix browser version
 - Improve the browser version of the lib (because I'm bundling it manually) 🖥️
 - ~~Nothing (I hope) 😀~~
