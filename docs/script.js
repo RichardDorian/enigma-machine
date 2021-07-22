@@ -31,7 +31,7 @@ function applyChanges() {
 
 function calculate() {
   const toCalculate = document.getElementById('to-encrypt').value;
-  if(toCalculate == "") { alert('You must have at least one letter to Encrypt/Decrypt'); }
+  if(toCalculate == "") { alert('You must have at least one letter to Encrypt/Decrypt'); return; }
   if(!checkChars(toCalculate)) { alert('You can\'t use specials characters with Enigma.'); return; } 
   if(toCalculate.indexOf(' ') >= 0) { alert('You can\'t use spaces with Enigma.'); return; }
   if (!enigma == 0) {
